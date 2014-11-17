@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <script language="javascript" type="text/javascript">
+           // environnement java script, le code acepter est uniquement du javascript, plus du html
+           //Créer un tableau pays indicé sur le code téléphonique
+           //(France 33, Belgique 32, Mexique 52, Japon 81)
+             
+           //variable d'indice i: 
+           i = 52;
+           /* 
+            * Création d'un tableau, l'indice du tableau correspodnant au code téléphoneique du pays
+            */
+            pays = new Array();
+            pays[32] = "Belgique";
+            pays[33] = "France";
+            pays[52] = "Mexique";
+            pays[81] = "Japon";
+            // On affiche le pays dont l'indicatif est l' indice i
+            document.write(pays[i]);
+            //Afficher également le nombre d'entrée du tableau
+            document.write("</br>" + pays.length);
+            //Affiche le poste 10 du tableau des pays (mais celui-ci n'existe pas)
+            document.write("</br>" + pays[10]);
+        </script>
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div>TODO write content</div>
+    </body>
+</html>
