@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <script language="javascript" type="text/javascript">
+            // environnement java script, le code acepter est uniquement du javascript, plus du html
+            //Créer un tableau pays indicé sur le code téléphonique
+            //(France 33, Belgique 32, Mexique 52, Japon 81)
+
+            //variable d'indice i: 
+            couleur = new Array("FFFFCC", "CCFFFF");
+            /* 
+             * Création d'un tableau, l'indice du tableau à 2 colonnes Pays + Code   
+             */
+            pays = new Array(
+                    new Array("Allemagne", 10),
+                    new Array("Belgique", 11),
+                    new Array("Espagne", 12),
+                    new Array("France", 13),
+                    new Array("Mexique", 14),
+                    new Array("Japon", 15)
+                    );
+            Tab_PAYS = "<table border=0><thead><tr><th> PAYS </th><th> CODE </th></tr></thead><tbody>";
+
+            pays2 = new Array(
+                    ["Allemagne", 10],
+                    ["Belgique", 11],
+                    ["Espagne", 12],
+                    ["France", 13],
+                    ["Mexique", 14],
+                    ["Japon", 15]
+                    );
+
+            Tab_PAYS2 = "";
+            Aff_PAYS2 = "";
+            for (i = 0; i <= pays.length - 1; i++)
+            {
+                Tab_PAYS += "<tr bgcolor=#" + couleur [i % 2] + "><td>" + pays[i][0] + "</td>" + "<td>" + pays[i][1] + "</td>" + "</tr>";
+                Tab_PAYS2 += "<tr bgcolor=#" + couleur [i % 2] + "><td>" + pays[i][0] + "</td>" + "<td>" + pays2[i][1] + "</td>" + "</tr>";
+                Aff_PAYS2 += "<option value =\"" + pays2[i][1] + "\">" + pays2[i][0] + "</option>";
+            }
+
+            Tab_PAYS += "</tr></tbody></table>";
+            //document.write(Tab_PAYS);
+
+        </script>
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1> Nos frais de port</h1>
+        <table border="1" cellspacing="0">
+            <thead>
+                <tr>
+                    <th> PAYS </th>
+                    <th> CODE </th>
+                </tr>
+            </thead>
+            <tbody>
+            <script language="javascript" type="text/javascript">
+                document.write(Tab_PAYS2);
+            </script>
+        </tbody>
+    </table>
+    <h2> Choisissez votre pays !</h2>
+    <form>
+        Pays
+        <select name="fdp">
+            <option value="">Choisissez votre pays</option>
+            <script language="javascript" type="text/javascript">
+                document.write(Aff_PAYS2);
+            </script>
+        </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="submit" value="Pays" />
+        
+    </form>
+</body>
+</html>
