@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Calcul TTC </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script language="javascript" type="text/javascript">
+            function Calcul_tva (Prix_HT, Taux_TVA)
+            {
+                Montant_TTC = Prix_HT + (Prix_HT * Taux_TVA)/100;
+                return (Montant_TTC);
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <script language="javascript" type="text/javascript">
+            Prix_ht = 23;
+            Taux = 19.5;
+            
+            Réponse = "le prix TTC d'un repas à " + Prix_ht + " Euro, avec une TVA à " + Taux + "% est de : " + Calcul_tva(Prix_ht, Taux);
+            document.write(Réponse);
+            document.write("<br />");
+            Taux = 5.5;
+            Réponse = "le prix TTC d'un repas à " + Prix_ht + " Euro, avec une TVA à " + Taux + "% est de : " + Calcul_tva(Prix_ht, Taux);
+            document.write(Réponse);
+           
+            </script>
+        </div>
+    </body>
+</html>
